@@ -129,6 +129,8 @@ mscan completes a full TCP handshake for every port. That is visible in the targ
 
 ## Development
 
+`cargo run --example listener` starts a throwaway server on 127.0.0.1:8000, so there is something to find.
+
 ```bash
 cargo test
 ```
