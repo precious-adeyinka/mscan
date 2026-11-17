@@ -27,7 +27,7 @@ cargo install mscan
 **From source**
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/precious-adeyinka/mscan
 cd mscan
 cargo build --release
 ```
@@ -93,7 +93,7 @@ Filtered is deliberately a catch-all. It can mean a firewall is dropping packets
 
 A timeout that is too short silently turns closed ports into filtered ones, and the output gives no warning.
 
-On the author's Windows machine, scanning closed ports on `127.0.0.1` takes about 2 seconds each before Windows reports "refused". With `--timeout 500`, every closed port was reported as `filtered (TimedOut)`. With `--timeout 3000`, the same ports were reported as closed. That is why the default is 3000 ms.
+On my Windows machine, scanning closed ports on `127.0.0.1` takes about 2 seconds each before Windows reports "refused". With `--timeout 500`, every closed port was reported as `filtered (TimedOut)`. With `--timeout 3000`, the same ports were reported as closed. That is why the default is 3000 ms.
 
 If every port on a machine you know is up shows as filtered, suspect your timeout first. Other operating systems and remote targets will behave differently.
 
